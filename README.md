@@ -1,7 +1,7 @@
 # LBTA-NewsFeedFacebook
 (1) UItabbarcontroller in code 
 
-   
+
         let feedController = FeedController(collectionViewLayout: UICollectionViewFlowLayout())
         let navigationController = UINavigationController(rootViewController: feedController)
         navigationController.title = "News Feed"
@@ -38,6 +38,7 @@
         tabBar.clipsToBounds = true
         
 (2) Collection view in code 
+
 (3) Nslayout constraints in code 
    extension UIView {
     
@@ -49,7 +50,7 @@
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(format, options: NSLayoutFormatOptions(), metrics: nil, views:    viewsDictionary))
     }
     
    }
@@ -93,12 +94,17 @@
    
 
 (4) Facebook image animation using core animation best example
+
 (5) UItapGesture on imageview
+
 (6) CAlayer on tabbar controller for its border color
+
         let topBorder = CALayer()
         topBorder.frame = CGRectMake(0, 0, 1000, 0.5)
         topBorder.backgroundColor = UIColor.rgb(229, green: 231, blue: 235).CGColor
+        
 (7) Old but new techniques to parse json response Using NSObject
+
 (8) Cahing image of NSURL session of short coding using NSUrlCache Class 
     
 (9) changing navigation bar tint and tab bar tint color in app Delegate
@@ -115,17 +121,19 @@
         
         application.statusBarStyle = .LightContent
   (10) Uicolor extension
-       extension UIColor {
+   
+   extension UIColor {
     
       static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
        }
-    
-}
+   }
+   
+   
   (11) collection view post text status height
   
   if let city = post?.location?.city, state = post?.location?.state {
-                    attributedText.appendAttributedString(NSAttributedString(string: "\n\(city), \(state)  •  ", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(12), NSForegroundColorAttributeName:
+                    attributedText.appendAttributedString(NSAttributedString(string: "\n\(city), \(state)  •  ", attributes:        [NSFontAttributeName: UIFont.systemFontOfSize(12), NSForegroundColorAttributeName:
                         UIColor.rgb(155, green: 161, blue: 161)]))
                     
                     let paragraphStyle = NSMutableParagraphStyle()
@@ -140,6 +148,8 @@
     
 }
 (12) when orientation change Collection view method will redraw it view using this method
+    
+    
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
