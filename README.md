@@ -132,28 +132,28 @@
    
   (11) collection view post text status height
   
-  if let city = post?.location?.city, state = post?.location?.state {
-                    attributedText.appendAttributedString(NSAttributedString(string: "\n\(city), \(state)  •  ", attributes:        [NSFontAttributeName: UIFont.systemFontOfSize(12), NSForegroundColorAttributeName:
+                  if let city = post?.location?.city, state = post?.location?.state {
+                    attributedText.appendAttributedString(NSAttributedString(string: "\n\(city), \(state)  •  ", 
+                    attributes:[NSFontAttributeName:   UIFont.systemFontOfSize(12), NSForegroundColorAttributeName:
                         UIColor.rgb(155, green: 161, blue: 161)]))
                     
                     let paragraphStyle = NSMutableParagraphStyle()
                     paragraphStyle.lineSpacing = 4
-                    
-                    attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
+                    attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0,       attributedText.string.characters.count))
                     
                     let attachment = NSTextAttachment()
                     attachment.image = UIImage(named: "globe_small")
                     attachment.bounds = CGRectMake(0, -2, 12, 12)
                     attributedText.appendAttributedString(NSAttributedString(attachment: attachment))
     
-}
+              }
 (12) when orientation change Collection view method will redraw it view using this method
     
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-        
-        collectionView?.collectionViewLayout.invalidateLayout()
-    }
+            override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+                super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+
+                collectionView?.collectionViewLayout.invalidateLayout()
+            }
 
 
